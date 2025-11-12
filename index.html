@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Desa Sidomukti</title>
+  <link rel="icon" type="image/png" href="images/logo-desa.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="/images/logo-desa.png" alt="Logo Desa Sidomukti">
+      <div class="logo-text">
+        <h1>Desa Sidomukti</h1>
+        <p>Kabupaten Bandungan</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#" class="active" onclick="showSection('home')">Beranda</a></li>
+        <li><a href="#" onclick="showSection('visimisi')">Visi Misi</a></li>
+        <li><a href="#" onclick="showSection('umkm')">UMKM</a></li>
+        <li><a href="#" onclick="showSection('pariwisata')">Pariwisata</a></li>
+        <li><a href="#" onclick="showSection('diagram')">Perangkat Desa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Selamat Datang</h2>
+      <h1>Website Desa Sidomukti</h1>
+      <p>Sumber informasi tentang Desa Sidomukti</p>
+    </div>
+  </section>
+
+  <section id="home" class="content-section active">
+    <h2>Profil Desa Sidomukti</h2>
+    <p>Desa Sidomukti merupakan salah satu desa yang berada di Kecamatan Bandungan, Kabupaten Semarang, Provinsi Jawa Tengah, dan dikenal sebagai wilayah dengan karakteristik alam pegunungan yang subur serta udara yang sejuk. Secara administratif, Desa Sidomukti terdiri dari enam dusun, yaitu Sidomukti, Tegalsari, Krandegan, Gerpetung, Kluwihan, dan Gelog. Setiap dusun memiliki kondisi geografis dan potensi lokal yang khas, namun secara umum masyarakatnya hidup dalam lingkungan pedesaan yang masih asri dan lekat dengan budaya agraris. Sebagian besar penduduk Desa Sidomukti bermata pencaharian sebagai petani, dengan komoditas unggulan berupa daun bawang yang ditanam di lahan-lahan terasering pegunungan serta bunga mawar yang dibudidayakan untuk memenuhi kebutuhan pasar lokal maupun luar daerah. Aktivitas pertanian menjadi salah satu penggerak ekonomi utama desa dan turut membentuk pola kehidupan sosial masyarakat yang saling bergotong royong dalam menjaga produktivitas lahan.</p>
+    <p>Selain dikenal sebagai desa agraris, Sidomukti juga memiliki daya tarik tersendiri sebagai kawasan wisata yang bernuansa alami dan sejuk. Letaknya yang strategis, tidak terlalu jauh dari pusat Kota Semarang maupun kawasan wisata Bandungan, menjadikan desa ini destinasi populer bagi wisatawan yang ingin menikmati suasana pegunungan tanpa harus menempuh perjalanan jauh. Beragam objek wisata tersedia di wilayah ini, mulai dari homestay yang dikelola oleh masyarakat lokal, wisata alam berbasis pemandangan pegunungan, petting zoo ramah keluarga, hingga jalur pendakian menuju puncak Gunung Ungaran yang banyak diminati pendaki. Keberadaan destinasi wisata ini turut memperluas peluang ekonomi masyarakat melalui sektor jasa, akomodasi, kuliner, dan usaha mikro yang berkembang di sekitar kawasan wisata.</p>
+    <p>Dalam aspek sosial dan keagamaan, mayoritas penduduk Desa Sidomukti memeluk agama Islam dan memiliki tradisi keagamaan yang dijalankan secara rutin sebagai bentuk rasa syukur serta sarana mempererat kebersamaan antarwarga. Pembacaan Surah Yasin diselenggarakan setiap hari Kamis malam atau malam Jumat secara bergilir di rumah warga, sementara pengajian rutin dilaksanakan setiap malam Jumat Kliwon sebagai momentum untuk menambah wawasan keagamaan sekaligus memperkuat nilai-nilai sosial dalam masyarakat. Selain kegiatan keagamaan, warga Desa Sidomukti juga aktif dalam kelompok tani di masing-masing dusun yang berfungsi sebagai wadah untuk berdiskusi, bertukar informasi mengenai teknik budidaya terkini, serta merencanakan upaya peningkatan hasil pertanian. Kelompok tani ini berperan penting dalam menjaga keberlanjutan sektor pertanian yang menjadi tulang punggung ekonomi desa sekaligus memperkuat solidaritas antarpetani.</p>
+    <p>Dengan perpaduan potensi alam, sektor pertanian yang kuat, tradisi sosial yang harmonis, serta geliat wisata yang semakin berkembang, Desa Sidomukti menjadi contoh desa pegunungan yang mampu memadukan kearifan lokal dengan peluang ekonomi modern, sehingga memberikan kontribusi signifikan bagi kesejahteraan masyarakatnya.</p>
+
+    <section class="statistik-wilayah">
+      <h2>Statistik Kependudukan Desa</h2>
+      <div class="chart-row">
+        <div class="chart-container">
+          <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="dokumentasi">
+      <h2>Dokumentasi Kegiatan Desa</h2>
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="/images/Kegiatan/img1.jpg" alt="Khitanan">
+            <div class="caption">Khitanan</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img2.jpg" alt="Evaluasi PKK">
+            <div class="caption">Evaluasi PKK</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img3.jpg" alt="Sosialiasi">
+            <div class="caption">Sosialisasi POC dan Alat Penebar Pupuk</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img4.jpg" alt="Menabung">
+            <div class="caption">Edukasi Menabung</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img5.jpg" alt="Bintang">
+            <div class="caption">Program Kerja BINTANG</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img6.jpg" alt="Literasi">
+            <div class="caption">Literasi</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img7.jpg" alt="Festival Olahraga">
+            <div class="caption">Festival Olahraga</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img8.jpg" alt="Bakti Desa">
+            <div class="caption">Bakti Desa</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img9.jpg" alt="Posyandu Sidomukti">
+            <div class="caption">Posyandu Sidomukti</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img10.jpg" alt="Karang Taruna">
+            <div class="caption">Karang Taruna</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img11.jpg" alt="Pembuatan Makanan Bergizi">
+            <div class="caption">Pelatihan Pembuatan Makanan Bergizi</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img12.jpg" alt="Posyandu Tegalsari">
+            <div class="caption">Posyandu Tegalsari</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img13.jpg" alt="Fattayat">
+            <div class="caption">Fattayat</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img14.jpg" alt="Muslimatan">
+            <div class="caption">Muslimatan</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img15.jpg" alt="Tour Guide">
+            <div class="caption">Tour Guide</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img16.jpg" alt="Video Profile">
+            <div class="caption">Pembuatan Video Pofile Desa</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img17.jpg" alt="Posyandu Kluwihan">
+            <div class="caption">Posyandu Kluwihan</div>
+          </div> 
+          <div class="slide">
+            <img src="/images/Kegiatan/img18.jpg" alt="Posyandu Geblog">
+            <div class="caption">Posyandu Geblog</div>
+          </div> 
+
+          <div class="slide">
+            <img src="/images/Kegiatan/img1.jpg" alt="Khitanan">
+            <div class="caption">Khitanan</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img2.jpg" alt="Evaluasi PKK">
+            <div class="caption">Evaluasi PKK</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img3.jpg" alt="Sosialiasi">
+            <div class="caption">Sosialisasi POC dan Alat Penebar Pupuk</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img4.jpg" alt="Menabung">
+            <div class="caption">Edukasi Menabung</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img5.jpg" alt="Bintang">
+            <div class="caption">Program Kerja BINTANG</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img6.jpg" alt="Literasi">
+            <div class="caption">Literasi</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img7.jpg" alt="Festival Olahraga">
+            <div class="caption">Festival Olahraga</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img8.jpg" alt="Bakti Desa">
+            <div class="caption">Bakti Desa</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img9.jpg" alt="Posyandu Sidomukti">
+            <div class="caption">Posyandu Sidomukti</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img10.jpg" alt="Karang Taruna">
+            <div class="caption">Karang Taruna</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img11.jpg" alt="Pembuatan Makanan Bergizi">
+            <div class="caption">Pelatihan Pembuatan Makanan Bergizi</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img12.jpg" alt="Posyandu Tegalsari">
+            <div class="caption">Posyandu Tegalsari</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img13.jpg" alt="Fattayat">
+            <div class="caption">Fattayat</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img14.jpg" alt="Muslimatan">
+            <div class="caption">Muslimatan</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img15.jpg" alt="Tour Guide">
+            <div class="caption">Tour Guide</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img16.jpg" alt="Video Profile">
+            <div class="caption">Pembuatan Video Pofile Desa</div>
+          </div>
+          <div class="slide">
+            <img src="/images/Kegiatan/img17.jpg" alt="Posyandu Kluwihan">
+            <div class="caption">Posyandu Kluwihan</div>
+          </div> 
+          <div class="slide">
+            <img src="/images/Kegiatan/img18.jpg" alt="Posyandu Geblog">
+            <div class="caption">Posyandu Geblog</div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+  <section class="mapping-potensi">
+  <h2>Mapping Potensi Desa Sidomukti</h2>
+  <p>Berikut merupakan peta potensi Desa Sidomukti yang menampilkan lokasi-lokasi strategis seperti Usaha Mikro, Kecil, dan Menengah, area pertanian, dan objek wisata.</p>
+
+  <div class="map-container">
+    <img src="/images/Mapping-Desa.jpg" alt="Peta Potensi Desa Sidomukti">
+  </div>
+</section>
+</section>
+
+
+  <section id="visimisi" class="content-section">
+    <h2>Visi, Misi, dan Tujuan Desa Sidomukti</h2>
+    <div class="visi-card">
+      <h3>Visi</h3>
+      <p><strong>Hadir lebih dekat melayani masyarakat dengan tata kelola pemerintahan yang baik untuk menuju Desa Sidomukti yang mandiri, tertib, dan sejahtera.</strong></p>
+    </div>
+    <div class="misi-card">
+      <h3>Misi</h3>
+      <ul>
+        <li>Menyelenggarakan pemerintahan yang transparan, adil, dan amanah sehingga tercipta keadilan bagi seluruh masyarakat Desa Sidomukti.</li>
+        <li>Menjadi jembatan masyarakat dalam rangka memikul amanah rakyat dengan sebaik-baiknya, dan juga menjadi penyalur aspirasi masyarakat, serta mengabdi.</li>
+        <li>Mendukung kegiatan masyarakat yang baik, berupa kegiatan keagamaan, kegiatan sosial, dan lain sebagainya, guna terciptanya komunikasi yang akrab dan merakyat.</li>
+        <li>Terlibat dan melibatkan diri dalam kegiatan kemasyarakatan dan kepemudaan supaya berjalan dengan baik dan maksimal, serta membanggakan.</li>
+        <li>Mendorong terciptanya pengelolaan sumber daya alam dan lingkungan hidup dengan tetap menjaga kelestariannya.</li>
+      </ul>
+    </div>
+    <div class="tujuan-card">
+      <h3>Tujuan</h3>
+      <ul>
+        <li>Meningkatkan derajat kesehatan masyarakat.</li>
+        <li>Mewujudkan masyarakat cerdas, kreatif, berbudaya, berkarakter, dan menguasai ilmu pengetahuan, teknologi, serta ketaqwaan.</li>
+        <li>Meningkatkan kegiatan usaha ekonomi daerah dengan memanfaatkan sumber daya lokal.</li>
+        <li>Mewujudkan pelaksanaan pemerintahan, pelayanan masyarakat, dan pembangunan yang efektif, efisien, dan akuntabel.</li>
+        <li>Menciptakan iklim yang kondusif bagi pelaksanaan pembangunan dan investasi.</li>
+        <li>Mewujudkan infrastruktur pembangunan yang berkualitas dan merata di seluruh wilayah.</li>
+        <li>Mewujudkan peran serta dan kemandirian masyarakat dalam pembangunan tanpa membedakan gender, dengan memperhatikan hak-hak anak.</li>
+        <li>Memanfaatkan sumber daya alam secara optimal dan melakukan pengelolaan lingkungan hidup yang berkelanjutan.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="umkm" class="content-section">
+    <h2>UMKM Desa Sidomukti</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/UMKM/tahu-bakso-mbakul.jpg" alt="Tahu Bakso Mbak UL">
+        <h3>Tahu Bakso Mbak UL</h3>
+        <p>Taku Bakso Mbak UL merupakan usaha rumahan yang berdiri sejak tahun 2015. Usaha ini berawal dari inisiatif pribadi pemilik yang memproduksi tahu bakso dengan cita rasa khas dan bahan-bahan pilihan. Hingga kini, Taku Bakso Mbak UL terus berkembang dan menjadi salah satu produk kuliner lokal yang digemari masyarakat sekitar.</p>
+      </div>
+      <div class="card">
+        <img src="images/UMKM/kerajinan-tas.jpg" alt="Tas Anyaman Iqiz Craft">
+        <h3>Tas Anyaman "Iqiz Craft"</h3>
+        <p>Iqiz Craft adalah usaha kerajinan tangan yang memproduksi berbagai jenis tas anyaman. Berdiri sejak tahun 2020, seluruh produk dibuat secara manual menggunakan teknik anyaman yang dipelajari secara otodidak. Pemasaran produk masih berfokus di wilayah sekitar Desa Sidomukti, namun kualitas dan keunikannya mulai menarik perhatian konsumen dari daerah lain.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/tape-singkong.jpg" alt="Tape Singkong">
+        <h3>Tape Singkong</h3>
+        <p>Usaha tape singkong ini telah berjalan selama kurang lebih sepuluh tahun. Meski sempat vakum selama dua tahun akibat pandemi COVID-19, kegiatan produksi kini telah kembali berjalan normal. Produk tape singkong ini dipasarkan dengan cara dititipkan ke pedagang sayur serta dijual langsung di pasar tradisional.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/tahu-bakso-h.jpg" alt="Tahu Bakso H">
+        <h3>Tahu Bakso H</h3>
+        <p>Tahu Bakso H merupakan salah satu usaha kuliner yang telah berproduksi sejak tahun 2013. Produk tahu bakso ini dikenal karena cita rasanya yang lezat dan teksturnya yang lembut. Untuk pemasarannya, produk ini dijual langsung ke pasar Bandungan dan menjadi salah satu kuliner unggulan lokal.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/aufa-snack.webp" alt="Aufa Snack">
+        <h3>Aufa Snack</h3>
+        <p>Aufa Snack merupakan usaha kuliner yang berdiri sejak tahun 2022. Usaha ini memproduksi aneka camilan seperti brownies dan risoles dengan cita rasa khas rumahan. Meski tergolong baru, Aufa Snack terus berkembang dan berkomitmen menghadirkan produk berkualitas yang higienis dan terjangkau.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/bolu-cukil.png" alt="Bolu Cukil Jadul">
+        <h3>Bolu Cukil Jadul</h3>
+        <p>Bolu Cukil Jadul mulai beroperasi sejak tahun 2023 dengan fokus pada produksi kue bolu klasik yang mempertahankan cita rasa tradisional. Produk ini dibuat dengan bahan-bahan pilihan tanpa bahan pengawet, menjadikannya favorit masyarakat pencinta kue rumahan.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/kulit-lumpia.jpg" alt="Kulit Lumpia Angga">
+        <h3>Kulit Lumpia Angga</h3>
+        <p>Kulit Lumpia Angga berdiri sejak November 2024 dan memproduksi kulit lumpia segar yang digunakan untuk berbagai olahan makanan. Produk ini dikenal karena teksturnya yang lembut dan tidak mudah robek. Banyak digunakan oleh pelaku usaha kuliner lokal maupun dijual langsung ke masyarakat.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/keripik.jpg" alt="Agrohorti Sari Rasa">
+        <h3>Agrohorti Sari Rasa</h3>
+        <p>Agrohorti Sari Rasa merupakan usaha yang berdiri sejak tahun 2014 dan bergerak di berbagai bidang, antara lain pertanian, perikanan, dan kuliner. Usaha ini berkontribusi dalam meningkatkan perekonomian masyarakat desa serta memperluas lapangan pekerjaan di sekitar Sidomukti.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/gudang-indofood.jpg" alt="Gudang Indofood">
+        <h3>Gudang Indofood</h3>
+        <p>Gudang Indofood merupakan usaha pengepul sayur dan rempah-rempah yang telah bekerja sama dengan PT Indofood sejak tahun 1980-an. Kegiatan utama meliputi pengumpulan, penyortiran, dan pendistribusian hasil bumi ke industri, menjadikannya bagian penting dalam rantai pasok pertanian lokal.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/fano-hijab.jpg" alt="Fano Hijab">
+        <h3>Fano Hijab</h3>
+        <p>Fano Hijab berdiri sejak tahun 2018 dan berfokus pada produksi serta penjualan busana muslim, khususnya hijab dengan berbagai model dan bahan. Produk-produk Fano Hijab dirancang dengan memperhatikan tren mode dan kenyamanan pengguna, menjadikannya salah satu usaha fashion yang berkembang di Desa Sidomukti.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/batako.jpg" alt="Batako TB Makmur">
+        <h3>Batako (TB Makmur)</h3>
+        <p>Batako TB Makmur merupakan usaha yang bergerak di bidang produksi bahan bangunan, khususnya batako. Usaha ini dimiliki oleh pengusaha dari Bergas, sementara proses produksinya dilakukan di Desa Sidomukti sebelum produk didistribusikan ke berbagai wilayah.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/bistik.jpg" alt="Bistik">
+        <h3>Bistik</h3>
+        <p>Usaha bistik ini dikenal sebagai salah satu produk kuliner lokal dengan cita rasa lezat khas rumahan. Meski berskala kecil, produk bistik ini menjadi alternatif makanan siap saji yang digemari masyarakat sekitar.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/sempolan.jpg" alt="Sempol Maknyus">
+        <h3>Sempol Maknyus</h3>
+        <p>Sempol Maknyus merupakan usaha mikro yang beroperasi dari rumah dan memproduksi jajanan sempol dengan cita rasa gurih serta tekstur lembut. Produk ini banyak diminati oleh warga sekitar karena rasanya yang khas dan harganya yang terjangkau.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/UMKM/omah-tahu.jpg" alt="Omah Tahu JJ">
+        <h3>Omah Tahu JJ</h3>
+        <p>Omah Tahu JJ adalah restoran unik yang seluruh menunya berbahan dasar tahu, mulai dari appetizer, hidangan utama, hingga minuman. Berlokasi di Jalan Goa Jepang, Bandungan, tempat ini menawarkan variasi olahan tahu dengan cita rasa khas dalam suasana yang tenang dan santai.</p>
+      </div>
+
+      <div class="card">
+          <img src="images/UMKM//aurelia-collection.jpg" alt="Aurelia Collection">
+          <h3>Aurelia Collection</h3>
+          <p>Aurelia Collection berfokus pada penjualan berbagai produk sandang dan kebutuhan rumah tangga. Produk yang ditawarkan meliputi pakaian, kerudung, mainan anak, jas hujan, serta sepeda. </p>  </div>
+
+            <div class="card">
+          <img src="images/UMKM/pinkyy-fashion.jpg" alt="Pinkyy Fashion Collection">
+          <h3>Pinkyy Fashion Collection</h3>
+          <p>Pinkyy Fashion Collection melayani pembuatan berbagai jenis busana, mulai dari busana formal hingga kasual serta seragam. Semua bahan diperoleh dari berbagai sumber terpercaya untuk menjaga kualitas produk yang dihasilkan.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/adilia-farm.jpg" alt="Adilia Farm">
+          <h3>Adilia Farm</h3>
+          <p>Didirikan sejak tahun 2004, Adilia Farm berfokus pada usaha pemotongan ayam tanpa kegiatan peternakan. Menyediakan berbagai jenis unggas seperti ayam broiler, ayam kampung, ayam petelur, ayam merah, dan bebek.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/mbak-san.jpg" alt="Warung Mbak San">
+          <h3>Warung Mbak San</h3>
+          <p>Warung Mbak San berdiri sejak tahun 2020 dan menjual aneka makanan seperti lotek serta berbagai jenis camilan yang tersedia sesuai pesanan pelanggan.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/sansan.jpg" alt="Sansan Snack & Catering">
+          <h3>Sansan Snack & Catering</h3>
+          <p>Sejak tahun 2018, Sansan Snack & Catering melayani penjualan aneka snack, nasi tumpeng, dan hidangan lainnya. Promosi dilakukan melalui media WhatsApp untuk menjangkau pelanggan lebih luas.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/alip-usaha.jpeg" alt="Alip Usaha">
+          <h3>Alip Usaha</h3>
+          <p>Berdiri sejak tahun 2018, Alip Usaha telah berjalan selama tujuh tahun dengan sistem promosi sederhana dari mulut ke mulut melalui tetangga dan pelanggan setia.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/mie-ayam.jpg" alt="Mie Ayam Krandegan">
+          <h3>Mie Ayam Krandegan</h3>
+          <p>Mie Ayam Krandegan berdiri sejak tahun 2020 dan menjual mie ayam serta bakso homemade. Buka setiap hari pukul 10.00 hingga 19.00 WIB, dan tutup setiap hari Jumat.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/toko-sesa.jpg" alt="Toko Sesa">
+          <h3>Toko Sesa</h3>
+          <p>Toko Sesa merupakan swalayan yang berdiri sejak tahun 2023, menyediakan berbagai kebutuhan rumah tangga dan produk harian bagi masyarakat sekitar.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/UMKM/berkah-jaya.jpg" alt="Berkah Jaya">
+          <h3>Berkah Jaya</h3>
+          <p>Sejak tahun 2018, Berkah Jaya aktif menjual berbagai produk melalui platform online seperti Shopee, TikTok, dan Facebook, guna menjangkau pasar yang lebih luas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pariwisata" class="content-section">
+      <h2>Pariwisata Desa Sidomukti</h2>
+      <div class="card-grid">
+        <a href="umbul-sidomukti.html" class="card link-card">
+          <img src="images/umbul-sidomukti.jpg" alt="Umbul Sidomukti">
+          <h3>Umbul Sidomukti</h3>
+          <p>Destinasi wisata alam dengan kolam renang alami dan panorama pegunungan yang memukau.</p>
+        </a>
+        <a href="sendang-prigen.html" class="card link-card">
+          <img src="images/sendang-prigen.jpg" alt="Sendang Prigen">
+          <h3>Sendang Prigen</h3>
+          <p>Situs patirtaan kuno bernilai sejarah yang menyatu dengan keindahan alam persawahan.</p>
+        </a>
+      </div>
+    </section>
+
+  <section id="diagram" class="content-section">
+    <h2>Struktur Perangkat Desa</h2>
+    <div class="diagram">
+      <div class="box"><strong>Kepala Desa</strong><br>Solekhan</div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="box"><strong>Sekretaris Desa</strong><br>Bambang Sunaryo</div>
+        <div class="box"><strong>Bendahara Desa</strong><br>Sundarni</div>
+        <div class="box"><strong>Kaur Umum & Perencanaan</strong><br>Mustangin</div>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="box"><strong>Kepala Seksi Pemerintahan</strong><br>Jadmiko</div>
+        <div class="box"><strong>Kepala Seksi Kesejahteraan</strong><br>Zuhri</div>
+        <div class="box"><strong>Kepala Seksi Pelayanan</strong><br>Suratno</div>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="box"><strong>Kepala Dusun Sidomukti</strong><br>Eko Sutrisno</div>
+        <div class="box"><strong>Kepala Dusun Krandegan</strong><br>Sri Asih</div>
+        <div class="box"><strong>Kepala Dusun Geblog</strong><br>Sri Rejeki</div>
+        <div class="box"><strong>Kepala Dusun Kluwihan</strong><br>Ahmad Damroji</div>
+        <div class="box"><strong>Kepala Dusun Tegalsari</strong><br>Toha Muhsoni</div>
+        <div class="box"><strong>Kepala Dusun Gerpetung</strong><br>Nita Puji Rahayu</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-map">
+        <h3>Lokasi Desa</h3>
+        <iframe src="https://www.google.com/maps?q=-7.1950,110.3656&hl=id&z=14&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="footer-info">
+        <h3>Kontak & Alamat</h3>
+        <p><strong>Alamat:</strong> Jl. Goa Jepang Km. 1, 50665, Desa Sidomukti, Kecamatan Bandungan, Kabupaten Semarang, Jawa Tengah</p>
+        <p><strong>Email:</strong> <a href="mailto:desasidomukti@gmail.com">desasidomukti@gmail.com</a></p>
+        <p><strong>Telepon:</strong> (024) 123-4567</p>
+        <p><strong>Jam Operasional:</strong> Senin - Jumat, 08.30 - 14.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>Desa Sidomukti</span> | Dibuat oleh Anindya Salsabila</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
